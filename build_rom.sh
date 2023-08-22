@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u repo init -u https://github.com/Project-Awaken/android_manifest -b triton --git-lfs -g default,-mips,-darwin,-notdefault
-git clone https://github.com/imlapta/local_manifest.git --depth 1 -b awaken-13 .repo/local_manifests
+git clone https://github.com/Imlapta/local_manifest.git --depth 1 -b awaken-13 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom            
 source build/envsetup.sh
-lunch awaken_munch-userdebug
+launch awaken_munch-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make bacon
 
